@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function generarLinkWhatsApp(nombreProducto, precio, cantidad = 1) {
   const telefono = "573132926005"; // Formato internacional para Colombia (+57 + 3132926005)
   const total = (precio * cantidad);
-  const mensaje = `\u00A1Hola! \u{1F33F} Me interesa el siguiente producto de Esencia Natural:\n\n\u{1F4E6} *${nombreProducto}*\n\u{1F4B0} *Precio unitario:* $${precio.toLocaleString('es-CO')} COP\n\u{1F522} *Cantidad:* ${cantidad}\n\u{1F4B5} *Total estimado:* $${total.toLocaleString('es-CO')} COP\n\n\u00BFTienen disponibilidad? Me gustar\u00EDa coordinar el env\u00EDo. \u00A1Muchas gracias!`;
+  const mensaje = `Hola! Me interesa el siguiente producto de Esencia Natural:\n\n*${nombreProducto}*\n*Precio unitario:* $${precio.toLocaleString('es-CO')} COP\n*Cantidad:* ${cantidad}\n*Total estimado:* $${total.toLocaleString('es-CO')} COP\n\nTienen disponibilidad? Me gustaria coordinar el envio. Muchas gracias!`;
   
   return `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 }
